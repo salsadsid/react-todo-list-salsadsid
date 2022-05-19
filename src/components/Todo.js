@@ -3,7 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const Todo = ({ todo, setTodoList, todoList }) => {
     const handleDelete = id => {
-        const url = `http://localhost:5000/todo/${id}`;
+        const url = `https://desolate-waters-67466.herokuapp.com/todo/${id}`;
         const proceed = window.confirm('Are you Sure ?')
         if (proceed) {
             fetch(url, {
@@ -22,7 +22,7 @@ const Todo = ({ todo, setTodoList, todoList }) => {
             id: id,
             completed: true,
         }
-        fetch(`http://localhost:5000/todo`, {
+        fetch(`https://desolate-waters-67466.herokuapp.com/todo`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

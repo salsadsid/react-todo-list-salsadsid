@@ -5,15 +5,15 @@ const TodoList = () => {
     const [todoList, setTodoList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/todo')
+        fetch('https://desolate-waters-67466.herokuapp.com/todo')
             .then(res => res.json())
             .then(data => setTodoList(data))
     }, [todoList])
 
 
     return (
-        <div class="todo-container">
-            <ul class="todo-list">
+        <div className="todo-container">
+            <ul className="todo-list">
                 {
                     todoList.map(todo => <Todo
                         key={todo._id}

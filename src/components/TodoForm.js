@@ -10,7 +10,7 @@ const TodoForm = () => {
             completed: false
         }
 
-        fetch('http://localhost:5000/todo', {
+        fetch('https://desolate-waters-67466.herokuapp.com/todo', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -28,10 +28,10 @@ const TodoForm = () => {
                 <h1>React Todo List</h1>
             </header>
             <form onSubmit={handleSubmit}>
-                <input type="text" class="todo-input-name" placeholder='name' name='name' />
-                <input type="text" class="todo-input" placeholder='description' name='description' />
-                <button class="todo-button" type="submit">
-                    <i class="fas fa-plus-square"></i>
+                <input type="text" className="todo-input-name" placeholder='name' name='name' />
+                <input type="text" className="todo-input" placeholder='description' name='description' />
+                <button className="todo-button" type="submit">
+                    <i className="fas fa-plus-square"></i>
                 </button>
             </form>
             <TodoList></TodoList>
