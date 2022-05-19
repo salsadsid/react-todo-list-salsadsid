@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Todo = ({ todo, setTodoList, todoList }) => {
     const handleDelete = id => {
@@ -16,6 +17,7 @@ const Todo = ({ todo, setTodoList, todoList }) => {
         }
     }
     const handleCompleted = (id) => {
+        toast('Task Completed')
         const data = {
             id: id,
             completed: true,
@@ -43,6 +45,7 @@ const Todo = ({ todo, setTodoList, todoList }) => {
             <button className='trash-btn' onClick={() => handleDelete(todo._id)}>
                 <i className='fas fa-trash'></i>
             </button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
